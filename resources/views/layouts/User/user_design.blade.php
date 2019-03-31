@@ -1,67 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="{{ asset('css/backend_css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/backend_css/font-awesome.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/backend_css/sweetalert.css') }}" />
-  <link rel="stylesheet" href="{{ asset('css/backend_css/ionicons.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/backend_css/AdminLTE.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-  <link rel="stylesheet" href="{{ asset('css/backend_css/skins/skin-blue.min.css') }}">
-
-
-
- 
+    <title>Hello World</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <script src="{{ asset('js/custom.js') }}"></script>
 </head>
+<body>
+<header class="site-header">
 
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+@include('layouts.User.user_header')
 
- @include('layouts.User.user_header')
- 
- @include('layouts.User.user_sidebar')
-
- @yield('content')
+@yield('content')
 
 @include('layouts.User.user_footer')
- 
 
+</header>
 
-
-<script src="{{ asset('js/backend_js/jquery.min.js') }}"></script>
-
-<script src="{{ asset('js/backend_js/bootstrap.min.js') }}"></script>
-
-<script src="{{ asset('js/backend_js/matrix.form_validation.js') }}"></script>
-<script src="{{ asset('js/backend_js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('js/backend_js/dataTables.bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/backend_js/sweetalert.min.js') }}"></script>
-<script src="{{ asset('js/backend_js/adminlte.min.js') }}"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-<script>
-   $(document).ready(function(){
-      $('.carousel').carousel({
-        interval: 5000
-      })
-    });    
-
-  $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
-</script>
-
+    <script type='text/javascript' src="{{ asset('js/jquery.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.collapsible.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/swiper.min.js') }} "></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.countdown.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/circle-progress.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.countTo.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.barfiller.js') }}"></script>
+    <script type='text/javascript' src='js/custom.js'></script>
 </body>
 </html>
